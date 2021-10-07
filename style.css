@@ -1,0 +1,1309 @@
+/*
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+*/
+
+:root {
+  --darkColor: rgb(52, 75, 71);
+  --mediumColor: rgb(127, 182, 172);
+  --lightColor: rgb(230, 244, 241);
+  --darkRgba5: rgba(52, 75, 71, 0.5);
+}
+
+html{
+  font-size: 16px;  
+}
+
+* {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+b {
+  font-weight: bold;
+}
+
+a, a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:visited {
+  color: inherit ;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0.1rem;
+}
+
+h2 {
+  
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  color: black;
+  text-shadow:1px 1px 2px var(--mediumColor);
+  z-index: 1;
+}
+
+.divSeparation {
+  height: 16rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed; 
+  z-index: -1;
+}
+
+#repairSeparation {
+  background-image: url('./images/Backgrounds/IMG_20201116_114238.jpg');
+}
+
+#cleaningSeparation {
+  background-image: url('./images/Backgrounds/IMG_20201116_114207.jpg');
+}
+
+#valuationSeparation {
+  background-image: url('./images/Backgrounds/IMG_20201115_142108.jpg');
+}
+
+#quotationSeparation {
+  background-image: url('./images/Backgrounds/IMG_20201116_114207.jpg');
+  border-top: 3px solid var(--darkColor);
+}
+
+body {
+  height: auto;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/*************************************************************************************************/
+/********************************************HEADER***********************************************/
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 9rem;
+  width: 100%;
+  z-index: 3;
+}
+
+
+#headBar {
+  background-color: var(--lightColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+#telephone {
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#mail {
+  display: none;
+}
+
+#socialMedia {
+  width: 60%;
+  max-width: 450px;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.socMedia {
+  height: 100%;
+  width: 12%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.socMedia:hover {
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+  border: 1px solid var(--darkColor);
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 1px;
+}
+
+.socMedia:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px;
+  border: 0px solid var(--lightColor);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#mailIcon {
+  background-image: url("./Icons/mail.png");
+}
+
+#facebook {
+  background-image: url("./Icons/facebook-logo.png");
+}
+
+#youtube {
+  background-image: url("./Icons/youtube.png");
+}
+
+#instagram {
+  background-image: url("./Icons/black-instagram-logo.png");
+}
+
+#pinterest {
+  background-image: url("./Icons/pinterest.png");
+}
+
+/****************Quotation Button********************************/
+
+#upButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  color: white;
+  bottom: 2rem;
+  left: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+  background-color: var(--darkColor);
+  z-index: 3;
+  transition: background-color 0.5s, color 0.1s;
+}
+
+#upButton span {
+  font-weight: bold;
+}
+
+
+#quotationButton {
+  
+  position:fixed;
+  right: -5px;
+  top: 40%;
+  width: 2rem;
+  height: auto;
+  z-index: 3;
+}
+
+#upButton:hover ,#quotationButton span:hover {
+  background-color: var(--mediumColor);
+  color: black;
+ }
+
+#quotationButton span {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.2rem;
+  color:white;
+  font-weight: bold; 
+  background-color: var(--darkColor);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  transition: background-color 0.5s, color 0.1s;
+}
+
+
+/*********************Main Header***************************/
+
+#mainHeader {
+  background-color: var(--mediumColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70%;
+  width: 100%;
+}
+
+#title {
+  padding: 0.5rem;
+  text-shadow: 2px 3px 2px var(--lightColor);
+}
+
+#subTitle { /********/
+  display: flex;
+  height: 20%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items:flex-end;
+}
+
+
+#h4-1, #h4-2, #h4-3, #h4-4, #h4-5 {
+  display: none;
+  font-size: 0rem;
+}
+
+@keyframes h4Animation {
+  from {font-size: 0rem ;}
+  to {font-size: 1.4rem ;}
+}
+
+#h4-1 {
+  animation-name: h4Animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#h4-2 {
+  animation-name: h4Animation;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+#h4-3 {
+  animation-name: h4Animation;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+#h4-4 {
+  animation-name: h4Animation;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+#h4-5 {
+  animation-name: h4Animation;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+#deliberyCollectionDiv {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 100%;
+  top:-10%;
+  animation-name: collection;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+#deliberyCollection {
+  font-size: 1.25rem;
+  background-color: var(--lightColor);
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.2rem;
+}
+
+@keyframes collection {
+  from { left: 100%;}
+  to {left: 0%;}
+}
+
+
+
+/**************************Menu Bar**************************/
+
+#menuBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#containerBar {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  background-color: var(--lightColor);
+  border-bottom: 2px solid black;
+  box-shadow: 0 4px 2px -2px  rgba(128, 128, 128, 0.65);
+}
+
+.menuTab {
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  background-color: var(--darkColor);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 20%;
+  transition: background-color 0.5s, color 0.1s;
+}
+
+#services {
+  max-height: 2rem;
+}
+
+#hidenList{
+  width: 20%;
+  display: none;
+  position: absolute;
+  font-size: 0.8rem;
+  top: 108%;
+
+}
+
+#lastHidenTab {
+  border-radius: 0px 0px 0.5rem 0.5rem;
+}
+
+.hidenTab {
+  text-align: center;
+  color: white;
+  padding: 0.4rem 0.2rem;
+  border: 1px solid white;
+  background-color: var(--darkColor);
+  transition: background-color 0.5s, color 0.1s;
+}
+
+.menuTab:hover , .hidenTab:hover {
+  cursor: pointer;
+  background-color: var(--mediumColor);
+  color: black;
+}
+
+
+#services:hover #hidenList {
+ display: block; 
+}
+
+#services:focus-within #hidenList {
+  display: block; 
+ }
+
+
+/***********************************************BODY************************************************/
+
+
+/*****************************Seccion About***************************************************/
+
+main {
+
+  margin-top: 9.7rem;
+  z-index: -2;
+}
+
+.sect {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 3px solid var(--darkColor);
+  border-bottom: 3px solid var(--darkColor);
+  box-shadow: 0px 9px 5px -5px rgba(128, 128, 128, 0.65), 0px -9px 5px -5px rgba(128, 128, 128, 0.65); 
+  z-index: 0;
+}
+
+#sectionAbout {
+  width: 100%;
+  height: auto;
+
+}
+
+#aboutAnimationContainer {
+  width: 100%;
+  max-width: 800px;
+  height: 24rem;
+  background-image: url("./images/Backgrounds/IMG_20201115_142108.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#aboutAnimation {
+  border-radius: 1rem;
+  background-color: rgba(196, 245, 247, 0);
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+}
+
+#aboutAnimationCenterDiv {
+  width: 0;
+  height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:center;
+  opacity: 0;
+  animation-name: divGetBig;
+  animation-delay: 7s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.aboutAnimationH4 {
+  width: 30%;
+  font-size: 0;
+}
+
+@keyframes divGetBig{
+  from {width: 0; height: 0; opacity: 0;}
+  to {width: 90%; height: 30%; opacity: 1;}
+}
+
+#lastH4 {
+  width: auto;
+  font-size: 0;
+  justify-self: center;
+  align-self:center;
+  animation-name: lastH4Animation;
+  animation-duration: 0.5s;
+  animation-delay: 13.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lastH4Animation {
+  from {font-size: 0rem ;}
+  to {font-size: 1.8rem ;}
+}
+
+@keyframes h41Animation {
+  0% {font-size: 0rem ;}
+  20% {font-size: 1.6rem ;}
+  80% {font-size: 1.6rem ;}
+  100% {font-size: 0rem ; }
+}
+
+#h41-1 {
+  animation-name: h4Animation;
+  animation-duration: 3.5s;
+  animation-delay: 7s;
+  animation-timing-function: ease-out;
+}
+
+#h41-2 {
+  animation-name: h4Animation;
+  animation-duration: 3s;
+  animation-delay: 8s;
+  animation-timing-function: ease-out;
+}
+
+#h41-3 {
+  animation-name: h4Animation;
+  animation-duration: 2.5s;
+  animation-delay: 9s;
+  animation-timing-function: ease-out;
+}
+
+#h41-4 {
+  animation-name: h4Animation;
+  animation-duration: 2.5s;
+  animation-delay: 10s;
+  animation-timing-function: ease-out;
+}
+
+#h41-5 {
+  animation-name: h4Animation;
+  animation-duration: 2s;
+  animation-delay: 11s;
+  animation-timing-function: ease-out;
+}
+
+
+#floatContainer {
+  
+  background-image: url("./images/Reviews/reviws11.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 5%;
+  position:relative;
+  top: -34%;
+  left: 20%;
+  animation-name: about;
+  animation-duration: 1.5s;
+  animation-iteration-count: 4;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  visibility: hidden;
+}
+
+
+@keyframes about {
+  0% {top:-34%; left:20%; width: 5%; height: 5%; visibility: hidden; opacity: 0 }
+  7.5% {top:-27%; left:30%; width: 16%; height: 16%; visibility:visible; opacity: 0.3; }
+  15% {top:-20%; left:35%; width: 27%; height: 27%;  }
+  22.5% {top:-13%; left: 30%; width: 38%; height: 38%;  }
+  30% {top: -6%; left: 20%; width: 49%; height: 49%;  }
+  37% {top: 0%; left: 0%; width: 65%; height: 55%; opacity: 1;}
+  
+
+  63% {top: 0%; left:0%; width: 65%; height: 55%; opacity: 1; }
+  70.5% {top: -6%; left: -20%; width: 49%; height: 49%; }
+  78% {top:-13%; left: -30%; width: 38%; height: 38%; }
+  85.5% {top:-20%; left:-35%; width: 27%; height: 27%; }
+  93% {top:-27%; left:-30%; width: 16%; height: 16%; opacity: 0.3; }
+  100% {top:-34%; left:-20%; width: 5%; height: 5%; visibility: hidden; opacity: 0; }
+}
+
+
+.aboutAnimationSmallContainer {
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 25%;
+  width: 70%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.counter {
+  font-weight: bold;
+}
+
+#aboutAnimationBigContainer {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#aboutAnimationBigContainer div {
+  width: 49%;
+  height: 100%;
+}
+
+#stockText, #reviewsText {
+  font-size: 0.9rem;
+}
+
+
+@keyframes example {
+  0%   {background-image: url("./images/Presentation/4.png") }
+  20%  {background-image: url("./images/Presentation/a1_0.jpg"); }
+  40%  {background-image: url("./images/Presentation/Painting\ rag.JPG"); }
+  60% {background-image: url("./images/Presentation/DSC037068.jpg"); }
+  80% {background-image: url("./images/Presentation/Repairing\ Hole.JPG"); }
+}
+
+.secText {
+  padding: 0.5rem;
+}
+
+#aboutTextContainer {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 1.5rem;
+  background-color: white;
+}
+
+#aboutTextContainer h4 {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+#aboutTextContainer p {
+  line-height: 1.4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.textContainer {
+  width: 30%;
+}
+
+.textContainer h3, p {
+  padding: 0.3rem;
+}
+
+.textContainer p {
+  font-size: 0.8rem;
+}
+/******************************************************************************************/
+/******************************Rug Cleaning************************************************/
+
+#sectionCleaning {
+  width: 100%;
+  height: auto;
+}
+
+#stainSec {
+  width: 90%;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#stainSec h2 {
+  padding: 0;
+}
+
+#stainTitle {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#stainExampleContainer {
+  width: 95%;
+  height: 23%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stainExampleDiv {
+  width:28%;
+  height: 100%;
+  border: 2px solid var(--darkColor);
+  box-shadow: 2px 2px 1px var(--mediumColor);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#liquidStain {
+  background-image: url("./images/CleaningStains/wine-stain.jpg");
+}
+
+.blindStain {
+  display:flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  background-color: var(--darkRgba5);
+  color: white;
+  transition: height 1s;
+}
+
+.bblindStain {
+  display:flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  background-color: var(--darkRgba5);
+  color: white;
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   .bblindStain {
+    transition: height 2s;
+  }
+}
+
+.blindStainOpen {
+height: 20%;
+    
+}
+
+.stainExampleDiv:hover > .blindStain {
+  cursor: pointer;
+  height: 20%;
+}
+
+#foodStain {
+  background-image: url("./images/CleaningStains/food-stain.jpg");
+}
+
+#mudStain {
+  background-image: url("./images/CleaningStains/mud-stain.jpg");
+}
+
+#stainDescription{
+  width: 100%;
+  height: 35%;
+  border: 2px solid var(--darkColor);
+  border-radius: 0.3rem;
+}
+
+#cleaningText {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  padding: 0.3rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+#firstPartCleaning {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 30rem;
+}
+
+
+#compareContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55%;
+  width: 80%;
+  max-width: 550px;
+}
+
+
+
+#imgCompareContainer {
+  border: 3px solid black;
+  width: 100%;
+  height: 90%;
+}
+
+.imgCompare {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+#secondPhoto {
+  position:relative;
+  top: -101%;
+  clip-path: polygon(0% 0%,50% 0%,50% 100%,0% 100%);
+  min-height: 100%;
+  z-index: 2;
+}
+
+#slideShow {
+  font-size: 1rem;
+  width: 100%;
+}
+
+#container-before-after{
+  font-size: 1rem;
+  display: flex;
+  width: 100%;
+  height: auto;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+}
+
+.before-after {
+  text-align: center;
+  height: auto;
+  width: 50%;
+  overflow: hidden;
+}
+
+#before{
+  background-color: var(--mediumColor);
+  color:black;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+#after {
+  background-color: var(--lightColor);
+  color: black;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+
+#cleaningExamples {
+  height: 25%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.smallCleaningExamples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  width: 20%;
+  border: 2px solid var(--darkColor);
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 1px var(--mediumColor);
+}
+
+.smallCleaningExamples:hover {
+  cursor: pointer;
+}
+
+.stainExampleDiv:active, .smallCleaningExamples:active, .repairExampleDiv:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 1px var(--mediumColor);
+}
+
+.smallCleaningExamplesDiv {
+ height: 80%;
+ width: 100%;
+ background-image: url("");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.smallCleaningExamples span{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  background-color: var(--lightColor);
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+
+#secondPartCleaning {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 35rem;
+}
+
+#rightCompareDiv p {
+  font-size: 0.75rem;
+}
+
+#rugCleaning {
+  padding: 2rem;
+}
+
+#cleaningProcessContainer {
+  width: 95%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  padding: 0.3rem 0;
+}
+
+.cleaningProcessDiv {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.cleaningProcessImg {
+  width: 20%;
+  height: 90%;
+  border: 2px solid var(--darkColor);
+  border-radius: 0.3rem;
+}
+
+.cleaningProcessDiv p {
+  height: auto;
+  width: 80%;
+}
+
+/*******************************************************************************************/
+/********************************Sec Repair*************************************************/
+
+#sectionRepair {
+  width: 100%;
+  height: auto;
+  justify-content: space-evenly;
+  
+}
+
+#repairExamples-TextContainer {
+  height: 25.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#repairExamples-Frame {
+  width: 100%;
+  height: 63.8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#repairExamplesContainerVertical {
+  height: 100%;
+  width: 31.25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#repairExamplesContainerRow {
+  height: 27%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repairExampleDiv {
+  width:25%;
+  height: 95%;
+  border: 2px solid var(--darkColor);
+  box-shadow: 2px 2px 1px var(--mediumColor);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#colourExample {
+  background-image: url('./images/Repair/colourEx/1.JPG');
+}
+
+#fringeExample {
+  background-image: url('./images/Repair/fringeEx/1.JPG');
+}
+
+#holeExample {
+  background-image: url('./images/Repair/holeEx/1.jpg');
+  background-size: 180% 180%;
+}
+
+#mothExample {
+  background-image: url('./images/Repair/MothEx/DSC03692.JPG');
+}
+
+#customizationExample {
+  background-image: url('./images/Repair/customizationEx/1.jpg');
+}
+
+.repairExampleDiv span {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#fringeExample:hover > .blindStain, #colourExample:hover > .blindStain {
+  height: 30%;
+}
+
+.repairExampleDiv:hover > .blindStain {
+  cursor: pointer;
+  height: 20%;
+}
+
+#colourExample, #fringeExample {
+  width:80%;
+  height: 40%;
+}
+
+#repairTextContainer {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+}
+
+#sectionRepair p {
+  text-align: center;
+  line-height: 1.4rem;
+  padding: 1rem 0.5rem;
+  max-width: 900px;
+}
+
+#repairStand {
+  width:50%;
+  height: 5rem; 
+  background-image: url('./images/RepairStamps.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+} 
+/*
+#repairStand p {
+  padding: 1rem 0.5rem 0.5rem;
+}*/
+
+
+@keyframes exampleRepair {
+  0%   {background-image: url("./images/Repair/DSC03674.JPG"); }
+  25%  {background-image: url("./images/Repair/DSC03676.JPG"); }
+  50%  {background-image: url("./images/Repair/DSC03677.JPG"); }
+  75% {background-image: url("./images/Repair/DSC03678.JPG"); }
+  100% {background-image: url("./images/Repair/DSC03680.JPG"); }
+}
+
+#repearingShowFrame {
+  border: 3px solid black;
+  height: 98%;
+  width: 61%;
+  background-image: url("./images/Repair/DSC03674.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: exampleRepair;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+}
+
+.imgRepairFrame , #repearingShowFrame {
+  border-radius: 0.3rem;
+} 
+
+
+/*******************************************************************************************/
+/******************************************Rug Valuation************************************/
+
+#sectionValuation {
+  border-bottom: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  z-index: 0;
+  background-color: white;
+  box-shadow: none;
+}
+
+#valuationDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 20rem;
+  background-image: url('./images/Backgrounds/valuation.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  box-shadow: 0px 9px 5px -5px rgba(128, 128, 128, 0.65);
+  z-index: 1;
+}
+
+#valuationDiv h3 {
+  background-color: rgba(52, 75, 71, 0.8);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+#valuationDiv p {
+  background-color: rgba(52, 75, 71, 0.8);
+  line-height: 1.1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+
+#learnMore {
+  margin: 0 auto;
+  position:relative;
+  text-align: center;
+  top: -15.1rem;
+  height: 7rem;
+  width: 100%;
+  max-width: 800px;
+  z-index: 0;
+  transition: top 2s, height 2s;
+}
+
+
+#learnMoreText {
+  height: 15rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border: 2px solid var(--darkColor);
+  margin-bottom: 0.5rem;
+}
+
+.hiddenElement {
+  display: none;
+}
+
+.buttonLearnClass {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--darkColor) ;
+  color: white;
+  transition: background-color 0.5s, color 0.1s;
+}
+
+.buttonLearnClass:hover {
+ cursor: pointer;
+ background-color: var(--mediumColor);
+ color: black;
+}
+
+
+#learnMoreContainer {
+  display: none ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid var(--darkColor);
+  height: 0rem;
+  z-index: -1;
+  padding: 0.5rem;
+}
+
+#learnMoreContainer p {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+/***************************************************************************************************/
+/*****************************Quotation*************************************************************/
+
+
+#sectionQuotation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35rem;
+  width: 100%;
+}
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30rem;
+  width: 100%;
+
+}
+
+#quoteForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  max-width: 650px;
+  width: 90%;
+  
+}
+
+#quoteForm input, #quoteForm textarea {
+  width: 80%;
+}
+
+#submit {
+  max-width: 250px;
+}
+
+#footer {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--mediumColor);
+}
+/********************************************************************************************/
+/********************************************************************************************/
+/******************************************Media Query***************************************/
+
+@media screen and (min-width: 650px) {
+  html {
+    font-size: 18px;
+  }
+  
+  #learnMoreText {
+    line-height: 1.4rem;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 950px) {
+  
+  html {
+    font-size: 20px;
+  }
+
+
+  #firstPartCleaning {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #cleaningExamples {
+    height: 90%;
+    width: 20%;
+    flex-direction: column;
+  }
+
+  .smallCleaningExamples {
+    height: 20%;
+    width: 90%;
+  }
+}
