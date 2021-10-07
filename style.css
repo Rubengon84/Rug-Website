@@ -1004,15 +1004,15 @@ height: 20%;
 }
 
 #colourExample {
-  background-image: url('./images/Repair/colourEx/1.JPG');
+  background-image: url('./images/Repair/colourEx/image-2.jpg');
 }
 
 #fringeExample {
-  background-image: url('./images/Repair/fringeEx/1.JPG');
+  background-image: url('./images/Repair/fringeEx/image-4.jpg');
 }
 
 #holeExample {
-  background-image: url('./images/Repair/holeEx/1.jpg');
+  background-image: url('./images/Repair/holeEx/image-4.jpg');
   background-size: 180% 180%;
 }
 
@@ -1021,7 +1021,7 @@ height: 20%;
 }
 
 #customizationExample {
-  background-image: url('./images/Repair/customizationEx/1.jpg');
+  background-image: url('./images/Repair/customizationEx/image-5.jpg');
 }
 
 .repairExampleDiv span {
@@ -1129,7 +1129,7 @@ height: 20%;
   width: 100%;
   max-width: 800px;
   height: 20rem;
-  background-image: url('./images/Backgrounds/valuation.jpg');
+  background-image: url('./images/Backgrounds/IMG_20201114_095423.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
