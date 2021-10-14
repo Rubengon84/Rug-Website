@@ -46,7 +46,7 @@ const cleaningRugExamples = {
 const floatContainerImages = ['./images/Reviews/reviws1.jpg', './images/Reviews/reviws2.jpg', './images/Reviews/reviws3.jpg', './images/Reviews/reviws11.jpg' ]
 
 
-
+/*
 // Animation for the Scrolling
 const square = document.getElementById('liquidBlindStain');
 square.classList.remove('blindStainOpen');
@@ -65,7 +65,7 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.getElementById('liquidStain'));
 
-
+*/
 
 
 
@@ -97,7 +97,7 @@ const updateCount = (element, speed) => {
     time();
 };
 
-
+/*
 // Change the reviews of the About Animation
 function changeFloatContainer(secondsDelay, times) {
   const container = document.getElementById("floatContainer");
@@ -122,20 +122,21 @@ setTimeout(() => {
     h4Tags[i].style.display = "none";
   }
 }, 13000);
-
+*/
 // Delay for when to start the counting numbers
 setTimeout(() => {
  
-  changeFloatContainer(6,4);
-  updateCount("reviewsNumber",650);
-  updateCount("yearsNumber",650);
-  updateCount("stockNumber",650);
+ // changeFloatContainer(6,4);
+  updateCount("reviewsNumber",400);
+  updateCount("yearsNumber",400);
+  updateCount("stockNumber",400);
 }, 1000);
 
+/*
 // Change the the width in the Animation for the Cleaning comparation section
 function changeRange(){
 
-  const range = document.getElementById("slideShow").value;
+   const range = document.getElementById("slideShow").value;
    const before = document.getElementById("before");
    const after = document.getElementById("after");
    const imgRange = document.getElementById("secondPhoto");
@@ -151,12 +152,50 @@ function changeRange(){
     document.getElementById("secondPhoto").setAttribute('src', objImg.derty);
     document.getElementById("firstPhoto").setAttribute('src', objImg.clean); 
   };
+*/
+
+  // Change the the width in the Animation for the Cleaning comparation section
+function changeRange(element){
+
+  const range = element.children[0].children[1].value;
+  const before = element.children[0].children[3].children[0];
+  const after = element.children[0].children[3].children[1];
+  const imgRange = element.children[0].children[0].children[1];;
+  before.style.width = range +'%';
+  after.style.width = (100-range)+'%';
+  imgRange.style.setProperty('clip-path', 'polygon(0% 0%,'+ range +'% 0%,'+ range +'% 100%,0% 100%)');
+ };
+/*
+ const cleaningExamplesDiv = document.getElementsByClassName("smallCleaningExamplesDiv");
+ const example2 = document.getElementById("example2");
+ 
+ function changeCompareImg (objImg) {
+   document.getElementById("secondPhoto").setAttribute('src', objImg.derty);
+   document.getElementById("firstPhoto").setAttribute('src', objImg.clean); 
+ };
+*/
+const comparationContainers = document.getElementsByClassName("comparationDiv");
+//console.log(comparationContainers[0].children[0].children[1].value);
+
+changeRange(comparationContainers[0]);
+changeRange(comparationContainers[1]);
+
   
 
 // Assign the photos to shows in the examples
 
   function assignCleaningExamples () {
   
+    const cleaningExamplesDiv = document.getElementsByClassName("smallCleaningExamplesDiv");
+    const example2 = document.getElementById("example2");
+    
+    function changeCompareImg (objImg) {
+      document.getElementById("secondPhoto").setAttribute('src', objImg.derty);
+      document.getElementById("firstPhoto").setAttribute('src', objImg.clean); 
+    };
+
+
+
     let randomNumbersSelection = [];
   
     for(let i=0; i < cleaningExamplesDiv.length; i++) {
@@ -207,7 +246,7 @@ function changeRange(){
       height = height + inc;
       hiddenElements[i].style.display = "inline-block";
       containerText.style.height = `${height}rem`;
-      }, i* 500);
+      }, i* 250);
     }  
   }
   else {
@@ -220,7 +259,7 @@ function changeRange(){
       height = height - inc;
       hiddenElements[i].style.display = "none";
       containerText.style.height = `${height}rem`;
-      }, i* 500);
+      }, i* 250);
     }  
 
 
@@ -238,3 +277,53 @@ const button = document.getElementsByClassName("buttonLearnClass");
 button[0].addEventListener("click", openLearnMore);
 button[1].addEventListener("click", openLearnMore);
 
+
+
+
+
+
+function changeShowFrame() {
+  const elements = $(".repairExampleDiv");
+  const repairButton = ["exampleRepairColour","exampleRepairFringe","exampleRepairHole","exampleRepairMoth","exampleRepairCustom"]
+  
+
+  function changeFrame(ele){
+    $(".repearingShowFrame").css("animation-name", ele);
+  }
+  for (let i=0; i < elements.length; i++) {
+
+    elements[i].addEventListener("click", () => {changeFrame(repairButton[i])});
+  }  
+
+}
+
+
+function assaingCleaninigProccesEx() {
+  
+  const elements = $(".cleaningProcessImg");
+  const cleaningProccesImg = ["0.jpg","1.jpg","2.jpg","3.png","4.jpg","5.png","6.jpg"]
+  const cleaningRoot = "./images/Cleaning/CleaningProcess/";
+  
+  for (let i=0; i < elements.length; i++) {
+    const imgRoot = cleaningRoot + cleaningProccesImg[i];
+
+    elements[i].style.backgroundImage = `url(${imgRoot})`;
+  }
+
+}
+
+
+// JQuery Section
+
+$(document).ready( () => {
+  
+  
+
+  assaingCleaninigProccesEx();
+  changeShowFrame();
+  /*
+  $("#customizationExample").click( () =>{
+    $(".repearingShowFrame").css("animation-name", "exampleRepairCustom");
+  });
+*/
+});
