@@ -1048,7 +1048,7 @@ height: 20%;
 #sectionRepair p {
   text-align: center;
   line-height: 1.4rem;
-  padding: 1rem 0.5rem;
+  margin-bottom: 2rem;
   max-width: 900px;
 }
 
@@ -1111,7 +1111,7 @@ height: 20%;
 .repearingShowFrame {
   border: 3px solid black;
   height: 98%;
-  width: 61%;
+  width: 62.1%;
   background-image: url("./images/Repair/DSC03674.JPG");
   background-position: center;
   background-size: cover;
