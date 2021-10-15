@@ -48,6 +48,25 @@ const floatContainerImages = ['./images/Reviews/reviws1.jpg', './images/Reviews/
 
 /*
 // Animation for the Scrolling
+const inputRange = document.getElementById('slideShow');
+//square.classList.remove('blindStainOpen');
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      inputRange.value = "15";
+      return;
+    }
+
+    inputRange.value = "15";;
+  });
+});
+
+observer.observe(document.getElementById('cleaningExamples'));
+
+/*
+
 const square = document.getElementById('liquidBlindStain');
 square.classList.remove('blindStainOpen');
 
@@ -66,7 +85,6 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.getElementById('liquidStain'));
 
 */
-
 
 
  // Animation for the counting Numbers
