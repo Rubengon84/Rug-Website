@@ -53,13 +53,16 @@ const inputRange = document.getElementById('slideShow');
 
 
 const observer = new IntersectionObserver(entries => {
+  
+
+
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      inputRange.value = "15";
+      inputRange.value = "30";
       return;
     }
-
-    inputRange.value = "15";;
+    
+    inputRange.value = "50";;
   });
 });
 

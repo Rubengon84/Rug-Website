@@ -322,17 +322,17 @@
       <section id="sectionQuotation" class="sect">
         <h2>Get Free Quote</h2>
         <div id="formContainer">
-        <form id="quoteForm">
-          <input tipe="text" placeholder="Your Name">
-          <input tipe="text" placeholder="Your Email">
-          <input type="text" placeholder="Contact Phone">
-          <input type="text" placeholder="Location">
-          <input type="text" placeholder="Rug Size (cm or ft)">
+        <form action="mail.php" method="post" id="quoteForm">
+          <input tipe="text" name="name" placeholder="Your Name">
+          <input tipe="email" name="email" placeholder="Your Email">
+          <input type="number" name="telephoneNumber" placeholder="Contact Phone">
+          <input type="text" name="location" placeholder="Location">
+          <input type="text" name="rugSize" placeholder="Rug Size (cm or ft)">
           <input type="file"
             id="avatar" name="avatar"
             accept="image/png, image/jpeg">
 
-          <textarea rows="5" cols="37" placeholder="Message"></textarea> 
+          <textarea name="message" rows="5" cols="37" placeholder="Message"></textarea> 
           <input id="submit" type="submit">
         </form>
         </div>
