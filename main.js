@@ -338,10 +338,14 @@ function assaingCleaninigProccesEx() {
 
 $(document).ready( () => {
   
+
+
   
 
   assaingCleaninigProccesEx();
   changeShowFrame();
+
+
   /*
   $("#customizationExample").click( () =>{
     $(".repearingShowFrame").css("animation-name", "exampleRepairCustom");

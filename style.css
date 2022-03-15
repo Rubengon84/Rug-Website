@@ -15,6 +15,7 @@
 
 html{
   font-size: 16px;  
+  min-width: 360px;
 }
 
 * {
@@ -67,6 +68,7 @@ h2 {
 }
 
 .divSeparation {
+  
   height: 16rem;
   width: 100%;
   background-position: center;
@@ -114,6 +116,7 @@ h4 {
 /********************************************HEADER***********************************************/
 
 header {
+  min-width: 360px;
   background-color: white;
   position: fixed;
   top: 0;
@@ -150,6 +153,17 @@ header {
 .mail {
   display: none;
   margin-left: 1rem;
+  border-radius: 0.3rem;
+  padding: 0 0.2rem;
+  transition: border 0.2s;
+} 
+
+.mail:hover {
+  
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2px solid black;
 }
 
 #contactMail {
@@ -221,40 +235,46 @@ header {
   color: white;
   bottom: 2rem;
   left: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   border: 2px solid black;
   background-color: var(--darkColor);
   z-index: 3;
   transition: background-color 0.5s, color 0.1s;
+  box-shadow: -0.1rem 0.1rem 0.3rem 0.3rem var(--mediumColor);
 }
 
 #upButton span {
   font-weight: bold;
 }
 
-#upButton span, #quotationButton span {
+#upButton ,#quotationButton {
   font-family: "Lato", sans-serif;
+  border: 2px solid black;
+  box-shadow: -0.1rem 0.1rem 0.4rem 0.1rem var(--mediumColor);
 } 
 
-#quotationButton {
-  
-  position:fixed;
-  right: -5px;
-  top: 40%;
-  width: 2rem;
-  height: auto;
-  z-index: 3;
-}
 
-#upButton:hover ,#quotationButton span:hover {
+#upButton:hover ,#quotationButton:hover {
   background-color: var(--mediumColor);
   color: black;
  }
 
-#quotationButton span {
-  border: 2px solid black;
+ #quotationButton:active {
+  background-color: var(--darkColor);
+  transform: scale(0.9); 
+}
+
+#quotationButton  {
+  
+  padding: 0.3rem 0.4rem;
+  position:fixed;
+  right: 0.5rem;
+  top: 40%;
+  width: 1rem;
+  height: auto;
+  z-index: 3;
   border-radius: 0.5rem;
-  padding: 0.4rem 0.4rem 0.4rem 0.2rem;
+  text-align: center;
   color:white;
   font-weight: bold; 
   background-color: var(--darkColor);
@@ -374,7 +394,7 @@ header {
   color: black;
 }
 
-.menuTab:active , .hidenTab:active {
+.menuTab:active , .hidenTab:active, #upButton:active {
   background-color: var(--darkColor);
   box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1045,7 +1065,7 @@ height: 20%;
   background-image: url('./images/Repair/customizationEx/1.jpg');
 }
 
-.repairExampleDiv span {
+.repairExampleDiv span, #stainExampleContainer span {
   font-size: 0.8rem;
   text-align: center;
 }
@@ -1316,11 +1336,116 @@ height: 20%;
   max-width: 250px;
 }
 
-#footer {
-  height: 5rem;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 4.5rem;
   width: 100%;
   background-color: var(--mediumColor);
 }
+
+#copyRight {
+  padding: 0.5rem;
+  font-family: "Lato";
+  font-size: 0.8rem;
+  color:var(--darkColor);
+}
+
+
+/********************************************************************************************/
+/****************************************faqPage*********************************************/
+
+
+
+#faqContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  
+}
+
+#questionsContainer {
+  width: 70%;
+  height: auto;
+  
+
+}
+
+
+.questions {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+.questions:hover {
+  cursor: pointer;
+}
+
+.answers {
+  background-color: var(--lightColor);
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: none;
+}
+
+#stainSec {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#stainExampleContainer {
+  width: 95%;
+  height: 23%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stainExampleDiv {
+  width:28%;
+  height: 100%;
+  border: 2px solid var(--darkColor);
+  box-shadow: 2px 2px 1px var(--mediumColor);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#liquidStain {
+  background-image: url("./images/CleaningStains/wine-stain.jpg");
+}
+
+#foodStain {
+  background-image: url("./images/CleaningStains/food-stain.jpg");
+}
+
+#mudStain {
+  background-image: url("./images/CleaningStains/mud-stain.jpg");
+}
+
+#stainDescription{
+  background-color: white;
+  width: 100%;
+  height: 50%;
+  border: 2px solid var(--darkColor);
+  border-radius: 0.3rem;
+}
+
+
 
 /********************************************************************************************/
 /*****************************************Contact Page***************************************/

@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="./style.css" type="text/css" rel="stylesheet" />
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js" defer></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./faq.js" defer></script>
   </head>
   <body>
     <header>
@@ -49,46 +49,54 @@
               <li id ="lastHidenTab" class="hidenTab"><a>Rug Underley</a></li>
             </ul>
           </li>
-          <li id="contactPage" class="menuTab">Contact</li>
+          <li class="menuTab">Contact</li>
         </ul>
       </div>
 
     </header>
 
     <aside>
-      <a href="./index.html#sectionQuotation">
-        <span id="quotationButton" >Free Quote</span>
+      <a href="#sectionQuotation">
+        <div id="quotationButton">
+          <span>Free Quote</span>
+        </div>
       </a>
     </aside>
     
-    <main>
-      <div id="contactContainer">
-        <div id="contactInformation">
-          <h3>Contact Details</h3>
-          <p>Do not hesitate to inquire about our services. You can call us using the phone number at the top of the page or below this text. Alternatively, use the e-mail address and send us a message or get free quote from the Quotation Section on the right side.</p>
-          <p><b>24 Aylmer Parade Aylmer Road, London N2 0PE</b></p>
-          <div id="openingContainer">
-            <span id="openinigSpan"><b>Opening Time:</b> Monday - Saturday:</span> 
-            <sapn>10:00 AM to 6:00 PM </span>
+    <main id="faqPageMain">
+      <div id="faqContainer">
+          <h3>How can we Help you?</h3>
+          <ul id="questionsContainer">
+            <li class="questions"><span>What to do if you Rug got a stain?</span></li>
+            <div class="answers">
+            <div id="stainSec">
+              <div id="stainExampleContainer">
+                <div id="liquidStain" class="stainExampleDiv"><div class="blindStain"><span>Liquid Stain</span></div></div>
+                <div id="foodStain" class="stainExampleDiv"><div class="blindStain"><span>Food Stain</span></div></div>
+                <div id="mudStain" class="stainExampleDiv"><div class="blindStain"><span>Mud Stain</span></div></div>
+              </div>
+              <div id="stainDescription">
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
           </div>
-          <a><span class="telephone">&#9742; 02083419191</span></a>
-          <a><span id="contactMail" class="mail">&#128231; info@rugmaster.com</span></a>
-        </div>
-        <div id="contactMap">
-          <div id="mapContainer"> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.25638188869!2d-0.1599351846683941!3d51.581864379647406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a393f0d0c79%3A0x5519bac635855bc9!2s24%20Aylmer%20Parade%2C%20London%20N2%200PE!5e0!3m2!1ses!2suk!4v1634320497371!5m2!1ses!2suk" allowfullscreen="" loading="lazy"></iframe>   
-          </div>
+            <li class="questions"><span> How long does it take to fix my rug?</span></li>
+            <div class="answers"></div>
+            <li class="questions"><span>How good is your restoration?</span></li>
+            <div class="answers"></div>
+          </ul>
 
 
 
         </div>  
       </div>
 
-    </main>
 
+    </main>
     <footer>
       <span id="copyRight">&copy; Copyright 2021, Rug Website</span>
     </footer>
- 
   </body>
 </html>
