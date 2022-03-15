@@ -36,7 +36,7 @@ a:hover {
 }
 
 a:visited {
-  color: inherit ;
+  color: orange ;
 }
 
 li a {
@@ -1613,9 +1613,9 @@ footer {
 
 @media screen and (min-width: 1000px) {
 
-  .comparationDiv {
+  /* .comparationDiv {
     width: 50%;
-  }
+  } */
 
   #comparationDiv2 {
     display: flex;

@@ -199,7 +199,7 @@ const comparationContainers = document.getElementsByClassName("comparationDiv");
 //console.log(comparationContainers[0].children[0].children[1].value);
 
 changeRange(comparationContainers[0]);
-changeRange(comparationContainers[1]);
+//changeRange(comparationContainers[1]);
 
   
 
