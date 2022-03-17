@@ -36,7 +36,7 @@ a:hover {
 }
 
 a:visited {
-  color: orange ;
+  color: inherit ;
 }
 
 li a {
@@ -1337,20 +1337,38 @@ height: 20%;
 }
 
 footer {
+  width: 100%;
+  background-color: var(--darkColor);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+footer p, footer span {
+  color: white;
+}
+
+.letterR {
+  font-size: 1.5rem;
+  vertical-align:sub;
+}
+
+
+/* footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 4.5rem;
   width: 100%;
   background-color: var(--mediumColor);
-}
+} */
 
-#copyRight {
+/* #copyRight {
   padding: 0.5rem;
   font-family: "Lato";
   font-size: 0.8rem;
   color:var(--darkColor);
-}
+} */
 
 
 /********************************************************************************************/
@@ -1398,11 +1416,16 @@ footer {
 
 #stainSec {
   width: 100%;
-  height: 15rem;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.howLong-good {
+  width: 100%;
+  height: auto;
 }
 
 #stainExampleContainer {
@@ -1411,6 +1434,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0.5rem 0rem;
 }
 
 .stainExampleDiv {
@@ -1440,10 +1464,37 @@ footer {
 #stainDescription{
   background-color: white;
   width: 100%;
-  height: 50%;
+  height: auto;
   border: 2px solid var(--darkColor);
   border-radius: 0.3rem;
 }
+
+.faqDescription {
+  border-radius: 0.3rem;
+  border: 2px solid var(--darkColor);
+  padding: 0.3rem;
+  background-color: white;
+}
+
+#stainSecList {
+  width: 95%;
+}
+
+#stainSecList li {
+  list-style-type: square;
+  list-style-position: inside;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1549,12 +1600,12 @@ footer {
 
   }
 
-
-
-
-
   #learnMoreText {
     line-height: 1.4rem;
+  }
+
+  #stainSec {
+    height: 15rem;
   }
 
 }
